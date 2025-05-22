@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4E5802D8-3120-4167-8A1C-5C06703A7236}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{4FD7E7B1-1D4E-43AD-A364-EB8508431089}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{9680C07F-86A2-4F36-B6CB-D9B3E77B2A61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationTracker.Application", "Core\LocationTracker.Application\LocationTracker.Application.csproj", "{C0EF47AE-9C2B-422F-8883-E6CD3C0530FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationTracker.Domain", "Core\LocationTracker.Domain\LocationTracker.Domain.csproj", "{8A446C17-5021-42D8-B76E-2AB5B2CDBE22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationTracker.Infrastructure", "Infrastructure\LocationTracker.Infrastructure\LocationTracker.Infrastructure.csproj", "{C7FF87B3-E175-4E57-B523-B9CD1AA5A357}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationTracker.Persistance", "Infrastructure\LocationTracker.Persistance\LocationTracker.Persistance.csproj", "{6ECC2480-CC1A-4194-B455-296E1E4800B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationTracker.API", "Presentation\LocationTracker.API\LocationTracker.API.csproj", "{3F5437D9-9CD0-47D6-8005-E6ED3E572B1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0EF47AE-9C2B-422F-8883-E6CD3C0530FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0EF47AE-9C2B-422F-8883-E6CD3C0530FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0EF47AE-9C2B-422F-8883-E6CD3C0530FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0EF47AE-9C2B-422F-8883-E6CD3C0530FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A446C17-5021-42D8-B76E-2AB5B2CDBE22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A446C17-5021-42D8-B76E-2AB5B2CDBE22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A446C17-5021-42D8-B76E-2AB5B2CDBE22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A446C17-5021-42D8-B76E-2AB5B2CDBE22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7FF87B3-E175-4E57-B523-B9CD1AA5A357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7FF87B3-E175-4E57-B523-B9CD1AA5A357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7FF87B3-E175-4E57-B523-B9CD1AA5A357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7FF87B3-E175-4E57-B523-B9CD1AA5A357}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ECC2480-CC1A-4194-B455-296E1E4800B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECC2480-CC1A-4194-B455-296E1E4800B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECC2480-CC1A-4194-B455-296E1E4800B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECC2480-CC1A-4194-B455-296E1E4800B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F5437D9-9CD0-47D6-8005-E6ED3E572B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F5437D9-9CD0-47D6-8005-E6ED3E572B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F5437D9-9CD0-47D6-8005-E6ED3E572B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F5437D9-9CD0-47D6-8005-E6ED3E572B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C0EF47AE-9C2B-422F-8883-E6CD3C0530FA} = {4E5802D8-3120-4167-8A1C-5C06703A7236}
+		{8A446C17-5021-42D8-B76E-2AB5B2CDBE22} = {4E5802D8-3120-4167-8A1C-5C06703A7236}
+		{C7FF87B3-E175-4E57-B523-B9CD1AA5A357} = {4FD7E7B1-1D4E-43AD-A364-EB8508431089}
+		{6ECC2480-CC1A-4194-B455-296E1E4800B1} = {4FD7E7B1-1D4E-43AD-A364-EB8508431089}
+		{3F5437D9-9CD0-47D6-8005-E6ED3E572B1E} = {9680C07F-86A2-4F36-B6CB-D9B3E77B2A61}
+	EndGlobalSection
+EndGlobal

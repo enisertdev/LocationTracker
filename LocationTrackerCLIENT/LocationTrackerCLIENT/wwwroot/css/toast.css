@@ -1,0 +1,26 @@
+﻿.success-toast #message-type {
+    color: #28a745;
+}
+
+.error-toast #message-type {
+    color: red;
+}
+
+.warning-toast #message-type {
+    color: #ffc107;
+}
+
+#liveToast {
+    background-color: #333 !important; /* koyu gri arka plan */
+    color: #fff !important; /* beyaz yazı */
+    z-index: 1080
+}
+
+    #liveToast .toast-header {
+        background-color: #222 !important; /* daha koyu üst kısım */
+        color: #fff !important;
+    }
+
+    #liveToast .toast-body {
+        color: #fff !important;
+    }

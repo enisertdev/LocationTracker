@@ -1,0 +1,80 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="~/css/toast.css" />
+    <link rel="stylesheet" href="~/css/login.css"/>
+</head>
+
+<body>
+<form class="login-form">
+    <div class="form-group">
+        <input id="email" type="email" placeholder="Email *" required>
+    </div>
+
+    <div class="form-group">
+        <input id="password" type="password" placeholder="Password *" required>
+    </div>
+
+    <button id="loginBtn" type="button">LOGIN</button>
+
+    <div class="links">
+        <a href="https://github.com/enisertdev" target="_blank">Enisertdev</a>
+    </div> 
+
+    <div id="loader-wrapper" class="loader-wrapper">
+        <div class="loader --1"></div>
+    </div>
+</form>
+<partial name="~/Views/Shared/_ToastPartial.cshtml" />
+
+<script>
+        const loginBtn = document.getElementById("loginBtn");
+        const loader = document.getElementById("loader-wrapper");
+
+        loginBtn.addEventListener("click", async() =>{
+            loader.style.display = "flex";
+            await login();
+        });
+
+
+        async function login(){
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const response = await fetch("https://locationapi.imaginewebsite.com.tr/api/auth/login",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json",
+                },
+                body: JSON.stringify({email: email, password: password})
+            });
+
+            const json = await response.json();
+            loader.style.display = "none";
+
+            if(!response.ok)
+            {
+                console.log(json);
+                showToast("ERROR", json.message);
+                return;
+            }
+
+            localStorage.setItem("jwt", json.token);
+            window.location.href = "/Home/Index";
+        }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/toast.js"></script>
+</body>
+</html>
